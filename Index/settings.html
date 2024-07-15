@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="syles.css">
+    <script>
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+            localStorage.setItem("bgColor", color); // Save color to localStorage
+        }
+    </script>
+</head>
+<body>
+    <div class="top-bar">
+        <h1>Settings</h1>
+        <div class="top-bar-buttons">
+            <button class="exit-btn" onclick="window.location.href='homepage.html';">Exit</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="blur-bg"></div>
+        <div class="form-container">
+            <h2>Change Background Color</h2>
+            <div class="color-options">
+                <button class="color-btn" style="background-color: #8e44ad;" onclick="changeBackgroundColor('#8e44ad');"></button>
+                <button class="color-btn" style="background-color: #3498db;" onclick="changeBackgroundColor('#3498db');"></button>
+                <button class="color-btn" style="background-color: #2ecc71;" onclick="changeBackgroundColor('#2ecc71');"></button>
+                <button class="color-btn" style="background-color: #f39c12;" onclick="changeBackgroundColor('#f39c12');"></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectronChatApp Homepage</title>
+    <link rel="icon" type="image/png" href="https://www.pinclipart.com/picdir/big/11-111759_more-apps-comments-more-apps-icon-png-clipart.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-bar">
+        <h1>ElectronChatApp!</h1>
+        <div class="top-bar-buttons">
+            <button onclick="window.location.href='settings.html';">Settings</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="blur-bg"></div>
+        <div class="form-container">
+            <h2>Welcome to ElectronChatApp!</h2>
+            <button class="play-btn" onclick="openRobloxGame()">Play Today!</button>
+            <div class="featured-buttons">
+                <button onclick="window.open('https://example.com', '_blank')">Featured Button 1</button>
+                <button onclick="window.open('https://example.com', '_blank')">Featured Button 2</button>
+                <!-- Add more featured buttons as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- News Frame -->
+    <div class="news-frame">
+        <div class="blur-bg"></div>
+        <div class="news-content">
+            <h3>🐞 There's a bug!</h3>
+            <p>We'll fix it as soon as we can. If the issue persists, we may temporarily remove the background color feature and explore new fonts and possibly introduce polls.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Check for saved background color and apply it on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            const savedColor = localStorage.getItem("bgColor");
+            if (savedColor) {
+                document.body.style.backgroundColor = savedColor;
+            }
+        });
+
+        function openRobloxGame() {
+            window.open("https://www.roblox.com/games/15988939973/Electron-Chat-pp", "_blank");
+        }
+    </script>
+</body>
+</html>
